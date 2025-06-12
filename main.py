@@ -1,0 +1,1 @@
+# Punto de entrada, contiene la función principal y el menú interactivo
