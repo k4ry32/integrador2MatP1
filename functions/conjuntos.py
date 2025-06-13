@@ -14,13 +14,7 @@ def operaciones_conjuntos(dnis):
 
     # INTERSECCION
     interseccion = set.intersection(*dnis) 
-
-    # UNION
-    union = set.union(*dnis) 
-
-    # INTERSECCION
-    interseccion = set.intersection(*dnis) 
-
+    
     # DIFERENCIA
     # Copia el valor del primer conjunto y resta desde el siguiente en la lista hasta el ultimo.
     diferencia = dnis[0].copy()

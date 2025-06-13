@@ -37,7 +37,7 @@ def menu():
         print('6. Evaluación de condiciones lógicas planteadas')
         print('Operaciones con años de nacimiento')
         print('7. Cuántos nacieron en años pares e impares')
-        print('8. Comprobar si alguno nació después del 2000')
+        print('8. Comprobar si alguno nació después del 1997 (Generación Z)')
         print('9. Comprobar si alguno nació en año bisiesto')
         print('10. Calcular el producto cartesiano entre el conjunto de años y el conjunto de edades actuales')
         print('0. Salir')
@@ -72,8 +72,7 @@ def menu():
                 dnis = obtenerConjuntoDnis(personas)             
                     
             case '3':
-                print('Ejercicio 3')
-
+                print(operaciones_conjuntos(dnis))
             case '4':
                 print('Ejercicio 4')
             case '5':
@@ -83,9 +82,9 @@ def menu():
             case '7':
                 print('Ejercicio 7')
             case '8':
-                print('Ejercicio 8')
+                generacionZ(personas)
             case '9':
-                print('Ejercicio 9')
+                nacido_en_bisiesto(personas)
             case '10':
                 print('Ejercicio 10')
             
