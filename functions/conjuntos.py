@@ -2,7 +2,7 @@
 
 # Obtiene el conjunto de digitos unicos de un DNI
 def obtenerConjuntoDNI(dni):
-    return sorted(set(dni))
+    return set(dni)
 
 # Funcion para operaciones con conjuntos (UNION, INTERSECCION, DIFERENCIA, DIFERENCIA SIMETRICA)
 def operaciones_conjuntos(conjuntosDNI):
@@ -35,8 +35,10 @@ def obtenerProductoCartesiano(conjunto1, conjunto2):
 
     # Se recorre el conjunto 1, por cada elemento se lo une con los elementos del conjunto 2
     for x in conjunto1:
+        row = []
         for y in conjunto2:
             newTuple = (x, y)
-            nuevoConjunto.append(newTuple)
+            row.append(newTuple)
+        nuevoConjunto.append(row)
 
     return nuevoConjunto

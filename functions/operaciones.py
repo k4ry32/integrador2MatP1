@@ -31,7 +31,9 @@ def grupoPar(conjunto1,conjunto2,conjunto3,conjunto4,conjunto5):
         conteo=0
         arreglo=[conjunto1,conjunto2,conjunto3,conjunto4,conjunto5]
         for conjunto in arreglo:
-                if sum(conjunto)%2==0:
+                lista = list(conjunto)
+                lista = [int(i) for i in lista]
+                if sum(lista)%2==0:
                         conteo+=1
         if conteo>=3:
                 print("El grupo es par")
@@ -56,11 +58,16 @@ def es_primo(numero):
 #Compara conjuntos si los iguales son primos
 def sumatoria_igual_y_primos(conjunto1,conjunto2,conjunto3,conjunto4,conjunto5):
         arreglo=[conjunto1,conjunto2,conjunto3,conjunto4,conjunto5]
+        
         for x in range(len(arreglo)):
-                suma1=sum(arreglo[x])
+                listaA = list(arreglo[x])
+                listaA = [int(i) for i in listaA]
+                suma1=sum(listaA)
 
                 for y in range(x+1,len(arreglo)):
-                        suma2=sum(arreglo[y])
+                        listaB = list(arreglo[y])
+                        listaB = [int(i) for i in listaB]
+                        suma2=sum(listaB)
 
                         if suma1==suma2:
                                 if es_primo(suma1):
