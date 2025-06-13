@@ -37,7 +37,7 @@ def menu():
         print('6. Evaluación de condiciones lógicas planteadas')
         print('Operaciones con años de nacimiento')
         print('7. Cuántos nacieron en años pares e impares')
-        print('8. Comprobar si alguno nació después del 1997 (Generación Z)')
+        print('8. Comprobar si alguno nació después del 2000')
         print('9. Comprobar si alguno nació en año bisiesto')
         print('10. Calcular el producto cartesiano entre el conjunto de años y el conjunto de edades actuales')
         print('0. Salir')
