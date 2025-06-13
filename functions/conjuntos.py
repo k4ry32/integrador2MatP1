@@ -2,7 +2,7 @@
 
 # Obtiene el conjunto de digitos unicos de un DNI
 def obtenerConjuntoDNI(dni):
-    return set(dni)
+    return sorted(set(dni))
 
 # Funcion para operaciones con conjuntos (UNION, INTERSECCION, DIFERENCIA, DIFERENCIA SIMETRICA)
 def operaciones_conjuntos(conjuntosDNI):
