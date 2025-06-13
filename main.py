@@ -1,4 +1,3 @@
-from model import Persona
 from functions import conjuntos
 from utils import mock
 
@@ -32,4 +31,5 @@ def operaciones_conjuntos(conjuntosDNI):
 
     return union, interseccion, diferencia, diferencia_sim
 
+# ¡¡¡ VERIFICA QUE FUNCIONA, BORRAR PARA LA ENTREGA !!!
 print(operaciones_conjuntos(conjuntosDNI))
