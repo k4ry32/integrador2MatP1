@@ -104,7 +104,7 @@ def menu():
             case '8':
                 generacionZ(personas)
             case '9':
-                nacido_en_bisiesto(personas)
+                nacidos_en_bisiesto(personas)
             case '10':
                 conjuntoEdades = []
                 conjuntoAnios = []
