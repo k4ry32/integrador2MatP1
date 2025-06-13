@@ -65,3 +65,28 @@ def sumatoria_igual_y_primos(conjunto1,conjunto2,conjunto3,conjunto4,conjunto5):
                         if suma1==suma2:
                                 if es_primo(suma1):
                                         print(f"Los conjuntos {x} e {y} son iguales ({suma1}) y son primos")
+
+def bisiesto(anio):
+    if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0):
+        return True
+    return False
+
+def nacido_en_bisiesto(personas):
+    array_anios = []
+    for persona in personas:
+           array_anios.append(persona.anio_nacimiento)
+
+    if any(bisiesto(anio) for anio in array_anios):
+        print("Tenemos un nacido en año bisiesto")
+    else:
+        print("Son todos normales")
+
+def generacionZ(personas):
+    array_anios = []
+    for persona in personas:
+        array_anios.append(persona.anio_nacimiento)
+    
+    if all(anios >= 2000 for anios in array_anios):
+          print("Todos son de la Gen Z")
+    else:
+        print("Hay infiltrados de otras generaciones")
