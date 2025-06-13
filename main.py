@@ -74,8 +74,7 @@ def menu():
                         print(f'Conjunto DNI para {persona.nombre}: {obtenerConjuntoDNI(persona.dni)}')        
                     
             case '3':
-                print('Ejercicio 3')
-
+                print(operaciones_conjuntos(dnis))
             case '4':
                 if personas is not None:
                     for persona in personas:
@@ -103,9 +102,9 @@ def menu():
 
                     imprimir_resumen_par_impar(anios)
             case '8':
-                print('Ejercicio 8')
+                generacionZ(personas)
             case '9':
-                print('Ejercicio 9')
+                nacido_en_bisiesto(personas)
             case '10':
                 conjuntoEdades = []
                 conjuntoAnios = []
