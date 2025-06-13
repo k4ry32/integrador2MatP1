@@ -11,4 +11,4 @@ for persona in personas:
     conjDNI = conjuntos.obtenerConjuntoDNI(persona.dni)
     conjuntosDNI.append(conjDNI)
 
-print(operaciones_conjuntos(conjuntosDNI))
+print(conjuntos.operaciones_conjuntos(conjuntosDNI))
