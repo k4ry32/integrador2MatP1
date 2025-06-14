@@ -74,7 +74,7 @@ def menu():
                         print(f'Conjunto DNI para {persona.nombre}: {obtenerConjuntoDNI(persona.dni)}')        
                     
             case '3':
-                print(operaciones_conjuntos(dnis))
+                operaciones_conjuntos(dnis, personas)
             case '4':
                 if personas is not None:
                     for persona in personas:

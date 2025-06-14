@@ -5,7 +5,7 @@ def obtenerConjuntoDNI(dni):
     return set(dni)
 
 # Funcion para operaciones con conjuntos (UNION, INTERSECCION, DIFERENCIA, DIFERENCIA SIMETRICA)
-def operaciones_conjuntos(dnis):
+def operaciones_conjuntos(dnis, personas):
     if not dnis:
         return set(), set(), set(), set()
 
@@ -14,20 +14,20 @@ def operaciones_conjuntos(dnis):
 
     # INTERSECCION
     interseccion = set.intersection(*dnis) 
-    
-    # DIFERENCIA
-    # Copia el valor del primer conjunto y resta desde el siguiente en la lista hasta el ultimo.
-    diferencia = dnis[0].copy()
-    for conjunto in dnis[1:]:
-        diferencia -= conjunto
 
     # DIFERENCIA SIMETRICA
-    diferencia_sim = dnis[0].copy()
-    for conjunto in dnis[1:]:
-        diferencia_sim = dnis[0].symmetric_difference(conjunto)
+    diferencia_sim = union - interseccion
 
-    return union, interseccion, diferencia, diferencia_sim
+    print("Operaciones con conjuntos:\n\n")
+    for persona in personas:
+        print(f"Nombre: {persona.nombre}, DNI: {persona.dni}, Conjunto DNI: {obtenerConjuntoDNI(persona.dni)}\n")
+    print(f"\n\nUNION: {sorted(union)}\nINTERSECCION: {interseccion}\nDIF. SIMETRICA: {sorted(diferencia_sim)}\n")
 
+    # DIFERENCIA
+    i=-1
+    for persona in personas:          
+          print(f"DIFERENCIA entre {persona.nombre} y {personas[i].nombre}.\n{obtenerConjuntoDNI(persona.dni) - obtenerConjuntoDNI(personas[i].dni)}\n")
+          i = i + 1
 
 # Funcion para obtener el producto cartesiano entre los conjuntos de años y edades
 def obtenerProductoCartesiano(conjunto1, conjunto2):
