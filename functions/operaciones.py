@@ -35,6 +35,7 @@ def grupoPar(conjunto1,conjunto2,conjunto3,conjunto4,conjunto5):
                 lista = list(conjunto)
                 lista = [int(i) for i in lista]
                 if sum(lista)%2==0:
+
                         par+=1
                 else:
                        impar+=1
