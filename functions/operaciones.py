@@ -28,15 +28,22 @@ def elementos_en_comun(conjunto1, conjunto2, conjunto3, conjunto4, conjunto5):
 
 #Expresion logica 2. Evalua si entre todos los conjuntos, la sumatoria de los digitos pares som mas representativos que los impares
 def grupoPar(conjunto1,conjunto2,conjunto3,conjunto4,conjunto5):
-        conteo=0
+        par=0
+        impar=0
         arreglo=[conjunto1,conjunto2,conjunto3,conjunto4,conjunto5]
         for conjunto in arreglo:
-                if sum(conjunto)%2==0:
-                        conteo+=1
-        if conteo>=3:
+                lista = list(conjunto)
+                lista = [int(i) for i in lista]
+                if sum(lista)%2==0:
+
+                        par+=1
+                else:
+                       impar+=1
+        if par >=impar:
                 print("El grupo es par")
         else:
                 print("El grupo es impar")
+
 
 
 #Expresion logica 3. 
@@ -56,12 +63,43 @@ def es_primo(numero):
 #Compara conjuntos si los iguales son primos
 def sumatoria_igual_y_primos(conjunto1,conjunto2,conjunto3,conjunto4,conjunto5):
         arreglo=[conjunto1,conjunto2,conjunto3,conjunto4,conjunto5]
+        
         for x in range(len(arreglo)):
-                suma1=sum(arreglo[x])
+                listaA = list(arreglo[x])
+                listaA = [int(i) for i in listaA]
+                suma1=sum(listaA)
 
                 for y in range(x+1,len(arreglo)):
-                        suma2=sum(arreglo[y])
+                        listaB = list(arreglo[y])
+                        listaB = [int(i) for i in listaB]
+                        suma2=sum(listaB)
 
                         if suma1==suma2:
                                 if es_primo(suma1):
                                         print(f"Los conjuntos {x} e {y} son iguales ({suma1}) y son primos")
+
+def bisiesto(anio):
+        if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0):
+                return True
+        else:
+                return False
+
+def nacidos_en_bisiesto(personas):       
+        array_anios = []
+        for persona in personas:
+                array_anios.append(persona.anio_nacimiento)
+
+        if any(bisiesto(anio) for anio in array_anios):
+                print("Tenemos un año especial")
+        else:
+                print("No hay nacidos en año bisiesto")
+
+def generacionZ(personas):
+        array_anios = []
+        for persona in personas:
+                array_anios.append(persona.anio_nacimiento)
+        
+        if all(anio >= 2000 for anio in array_anios):
+                print("El grupo entero es de la generacion Z")
+        else:
+                print("Hay al menos un Millennial infiltrado")
