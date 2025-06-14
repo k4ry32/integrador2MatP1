@@ -35,7 +35,7 @@ def grupoPar(conjunto1,conjunto2,conjunto3,conjunto4,conjunto5):
                 lista = [int(i) for i in lista]
                 if sum(lista)%2==0:
                         conteo+=1
-        if conteo>=3:
+        if conteo>=(len(arreglo))//2:
                 print("El grupo es par")
         else:
                 print("El grupo es impar")
