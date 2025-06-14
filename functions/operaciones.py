@@ -28,15 +28,21 @@ def elementos_en_comun(conjunto1, conjunto2, conjunto3, conjunto4, conjunto5):
 
 #Expresion logica 2. Evalua si entre todos los conjuntos, la sumatoria de los digitos pares som mas representativos que los impares
 def grupoPar(conjunto1,conjunto2,conjunto3,conjunto4,conjunto5):
-        conteo=0
+        par=0
+        impar=0
         arreglo=[conjunto1,conjunto2,conjunto3,conjunto4,conjunto5]
         for conjunto in arreglo:
-                if sum(conjunto)%2==0:
-                        conteo+=1
-        if conteo>=3:
+                lista = list(conjunto)
+                lista = [int(i) for i in lista]
+                if sum(lista)%2==0:
+                        par+=1
+                else:
+                       impar+=1
+        if par >=impar:
                 print("El grupo es par")
         else:
                 print("El grupo es impar")
+
 
 
 #Expresion logica 3. 
